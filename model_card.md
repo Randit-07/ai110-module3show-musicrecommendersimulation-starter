@@ -2,110 +2,73 @@
 
 ## 1. Model Name  
 
-Give your model a short, descriptive name.  
-Example: **VibeFinder 1.0**  
+**SessionSeed Recommender 1.0**
 
 ---
 
 ## 2. Intended Use  
 
-Describe what your recommender is designed to do and who it is for. 
-
-Prompts:  
-
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+This recommender generates top-k song suggestions from a small CSV catalog based on a single user taste profile. It assumes the user has a meaningful "seed" preference from a current listening session, especially around artist, genre, and mood, and then refines results with numeric targets like tempo and energy. This is for classroom exploration, not production use with real users.
 
 ---
 
 ## 3. How the Model Works  
 
-Explain your scoring approach in simple language.  
+Each song is scored one-by-one against the user profile. The model gives the largest weight to artist match, then genre and mood matches, then adds distance-based similarity for tempo, energy, valence, danceability, and acousticness. Songs that are closer to the target numeric values get more points than songs that are farther away. After all songs are scored, the model ranks them from highest to lowest and returns the top results with short explanations.
 
-Prompts:  
-
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
-
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
+Compared with the starter logic, I implemented a full scoring loop, weighted feature priorities, CSV loading, ranking, and explanation text for why a song was recommended.
 
 ---
 
 ## 4. Data  
 
-Describe the dataset the model uses.  
+The catalog currently has 26 songs. It includes genres and moods such as pop, lofi, rock, ambient, jazz, synthwave, indie pop, classical, afrobeat, metal, country, reggae, edm, r&b, folk, jazz pop, chamber pop, and vocal jazz, with moods ranging from chill/relaxed to intense/aggressive and romantic/wistful.
 
-Prompts:  
+I expanded the starter dataset by adding additional rows, including Laufey songs and stylistically adjacent artists (for example, Norah Jones and Samara Joy), to improve coverage of softer jazz-pop and acoustic listening styles.
 
-- How many songs are in the catalog  
-- What genres or moods are represented  
-- Did you add or remove data  
-- Are there parts of musical taste missing in the dataset  
+Important gaps still exist: the dataset is small, mostly English-language, and does not represent many regional genres, lyrical themes, or subcultures.
 
 ---
 
 ## 5. Strengths  
 
-Where does your system seem to work well  
-
-Prompts:  
-
-- User types for which it gives reasonable results  
-- Any patterns you think your scoring captures correctly  
-- Cases where the recommendations matched your intuition  
+- Works well for users with clear, stable preferences in artist/genre/mood.
+- Captures session intent better than a single-feature recommender because it combines categorical and numeric signals.
+- Produces transparent output by returning song title, score, and reason text in the CLI.
+- Behaves intuitively when numeric targets are coherent (for example, high-energy/high-tempo profiles receive energetic songs).
 
 ---
 
 ## 6. Limitations and Bias 
 
-Where the system struggles or behaves unfairly. 
-
-Prompts:  
-
-- Features it does not consider  
-- Genres or moods that are underrepresented  
-- Cases where the system overfits to one preference  
-- Ways the scoring might unintentionally favor some users  
+- It does not consider lyrics, language, release era, popularity, or cultural context.
+- Artist-heavy weighting can over-concentrate recommendations and reduce discovery.
+- Small catalog size means some users may get repetitive or weakly relevant results.
+- Underrepresented genres will naturally be shown less often, creating exposure bias.
+- A single profile cannot represent changing mood within one listening session.
 
 ---
 
 ## 7. Evaluation  
 
-How you checked whether the recommender behaved as expected. 
+I evaluated behavior by running the CLI simulation and inspecting whether top recommendations matched the intended profile and scoring priorities. I also checked that recommendation explanations reflected dominant signals (artist match and numeric closeness) and used existing unit tests for baseline recommender behavior.
 
-Prompts:  
+A notable observation was that strong artist weighting can lift artist matches even when mood differs, which is useful for fan behavior but can conflict with strict vibe matching.
 
-- Which user profiles you tested  
-- What you looked for in the recommendations  
-- What surprised you  
-- Any simple tests or comparisons you ran  
-
-No need for numeric metrics unless you created some.
+TODO: add 2-3 explicit profile comparison runs (for example, intense rock vs chill lofi vs Laufey-like profile) and document expected versus actual top-k outputs in this section.
 
 ---
 
 ## 8. Future Work  
 
-Ideas for how you would improve the model next.  
-
-Prompts:  
-
-- Additional features or preferences  
-- Better ways to explain recommendations  
-- Improving diversity among the top results  
-- Handling more complex user tastes  
+- Add preference decay and diversity constraints so top-k results are less repetitive.
+- Support multi-objective ranking (for example, 70% preference fit + 30% novelty).
+- Introduce optional filters for language, era, or explicit-content preferences.
+- Improve explanation quality with per-feature contribution breakdown.
+- Expand the catalog substantially and rebalance genre representation.
 
 ---
 
 ## 9. Personal Reflection  
 
-A few sentences about your experience.  
-
-Prompts:  
-
-- What you learned about recommender systems  
-- Something unexpected or interesting you discovered  
-- How this changed the way you think about music recommendation apps  
+Building this made it clear that recommendation quality depends as much on feature design and weighting choices as on algorithm structure. A simple weighted scorer can feel surprisingly useful when preferences are clear, but it can also encode strong bias quickly when one feature (like artist) dominates. This project changed how I think about real music apps: ranking is not just "what matches," it is also a policy decision about exploration, fairness, and which user signals are treated as most important.

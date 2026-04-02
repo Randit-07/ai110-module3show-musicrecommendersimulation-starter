@@ -1,0 +1,150 @@
+
+======================================================================
+🎵  PROFILE: High-Energy Pop
+======================================================================
+
+  ▶ #1  Sunrise City
+      Artist: Neon Echo
+      Score: 10.64  [██████████]
+      Why: Matched on genre match, mood match, energy closeness 0.90, tempo closeness 0.90
+
+  ▪ #2  Gym Hero
+      Artist: Max Pulse
+      Score: 9.12  [█████████░]
+      Why: Matched on genre match, energy closeness 0.99, tempo closeness 1.00, valence closeness 0.91
+
+  ▪ #3  Rooftop Lights
+      Artist: Indigo Parade
+      Score: 8.90  [████████░░]
+      Why: Matched on mood match, energy closeness 0.84, tempo closeness 0.94, valence closeness 0.95
+
+  ◦ #4  Neon Pulse
+      Artist: Arc Reactor
+      Score: 7.51  [███████░░░]
+      Why: Matched on energy closeness 0.98, tempo closeness 0.97, valence closeness 0.90, danceability closeness 0.96
+
+  ◦ #5  City Carnival
+      Artist: Golden Kora
+      Score: 7.19  [███████░░░]
+      Why: Matched on energy closeness 0.92, tempo closeness 0.83, valence closeness 0.98, danceability closeness 0.99
+
+
+======================================================================
+🎵  PROFILE: Chill Lofi
+======================================================================
+
+  ▶ #1  Library Rain
+      Artist: Paper Lanterns
+      Score: 10.68  [██████████]
+      Why: Matched on genre match, mood match, energy closeness 0.93, tempo closeness 0.96
+
+  ▪ #2  Midnight Coding
+      Artist: LoRoom
+      Score: 10.45  [██████████]
+      Why: Matched on genre match, mood match, energy closeness 0.86, tempo closeness 1.00
+
+  ▪ #3  Spacewalk Thoughts
+      Artist: Orbit Bloom
+      Score: 9.27  [█████████░]
+      Why: Matched on mood match, energy closeness 1.00, tempo closeness 0.87, valence closeness 0.81
+
+  ◦ #4  Focus Flow
+      Artist: LoRoom
+      Score: 8.52  [████████░░]
+      Why: Matched on genre match, energy closeness 0.88, tempo closeness 0.99, valence closeness 0.87
+
+  ◦ #5  Fireplace Letters
+      Artist: North Meadow
+      Score: 7.44  [███████░░░]
+      Why: Matched on energy closeness 0.97, tempo closeness 0.94, valence closeness 0.91, danceability closeness 0.98
+
+
+======================================================================
+🎵  PROFILE: Deep Intense Rock
+======================================================================
+
+  ▶ #1  Storm Runner
+      Artist: Voltline
+      Score: 10.82  [██████████]
+      Why: Matched on genre match, mood match, energy closeness 0.99, tempo closeness 0.97
+
+  ▪ #2  Gym Hero
+      Artist: Max Pulse
+      Score: 8.53  [████████░░]
+      Why: Matched on mood match, energy closeness 0.97, tempo closeness 0.89, valence closeness 0.57
+
+  ▪ #3  Iron Anthem
+      Artist: Black Forge
+      Score: 7.14  [███████░░░]
+      Why: Matched on energy closeness 0.94, tempo closeness 0.80, valence closeness 0.99, danceability closeness 0.93
+
+  ◦ #4  Neon Pulse
+      Artist: Arc Reactor
+      Score: 6.45  [██████░░░░]
+      Why: Matched on energy closeness 0.96, tempo closeness 0.86, valence closeness 0.58, danceability closeness 0.53
+
+  ◦ #5  Night Drive Loop
+      Artist: Neon Echo
+      Score: 6.29  [██████░░░░]
+      Why: Matched on energy closeness 0.85, tempo closeness 0.73, valence closeness 0.85, danceability closeness 0.72
+
+
+======================================================================
+🎵  PROFILE: Adversarial Conflict: Sad but Hyper
+======================================================================
+
+  ▶ #1  Gym Hero
+      Artist: Max Pulse
+      Score: 8.13  [████████░░]
+      Why: Matched on genre match, energy closeness 0.97, tempo closeness 0.91, valence closeness 0.35
+
+  ▪ #2  Sunrise City
+      Artist: Neon Echo
+      Score: 7.79  [███████░░░]
+      Why: Matched on genre match, energy closeness 0.92, tempo closeness 0.81, valence closeness 0.28
+
+  ▪ #3  Storm Runner
+      Artist: Voltline
+      Score: 7.09  [███████░░░]
+      Why: Matched on energy closeness 0.99, tempo closeness 0.95, valence closeness 0.64, danceability closeness 0.86
+
+  ◦ #4  Iron Anthem
+      Artist: Black Forge
+      Score: 6.62  [██████░░░░]
+      Why: Matched on energy closeness 0.94, tempo closeness 0.78, valence closeness 0.79, danceability closeness 0.72
+
+  ◦ #5  Neon Pulse
+      Artist: Arc Reactor
+      Score: 6.54  [██████░░░░]
+      Why: Matched on energy closeness 0.96, tempo closeness 0.88, valence closeness 0.36, danceability closeness 0.88
+
+
+======================================================================
+🎵  PROFILE: Adversarial Mismatch: Acoustic Club
+======================================================================
+
+  ▶ #1  Neon Pulse
+      Artist: Arc Reactor
+      Score: 8.09  [████████░░]
+      Why: Matched on genre match, energy closeness 0.88, tempo closeness 0.99, valence closeness 0.94
+
+  ▪ #2  Midnight Coding
+      Artist: LoRoom
+      Score: 7.38  [███████░░░]
+      Why: Matched on mood match, energy closeness 0.60, tempo closeness 0.66, valence closeness 0.86
+
+  ▪ #3  Library Rain
+      Artist: Paper Lanterns
+      Score: 7.22  [███████░░░]
+      Why: Matched on mood match, energy closeness 0.53, tempo closeness 0.61, valence closeness 0.90
+
+  ◦ #4  Rooftop Lights
+      Artist: Indigo Parade
+      Score: 6.94  [██████░░░░]
+      Why: Matched on energy closeness 0.94, tempo closeness 0.99, valence closeness 0.89, danceability closeness 0.96
+
+  ◦ #5  Sunrise City
+      Artist: Neon Echo
+      Score: 6.84  [██████░░░░]
+      Why: Matched on energy closeness 1.00, tempo closeness 0.94, valence closeness 0.86, danceability closeness 0.93
+
